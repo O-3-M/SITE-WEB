@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #0f1724;
+  color: #e8eefc;
+}
+
+header {
+  text-align: center;
+  padding: 50px 20px 30px;
+  background: linear-gradient(135deg, #1b2a49, #0f1724);
+  border-bottom: 3px solid #2a6df4;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.6rem;
+  letter-spacing: 1px;
+}
+
+header p {
+  margin: 8px 0 0;
+  color: #9fb0d4;
+}
+
+main {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+}
+
+.membre {
+  background: #17223a;
+  border-radius: 16px;
+  padding: 28px 20px;
+  text-align: center;
+  border-top: 6px solid var(--couleur, #2a6df4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.membre:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+.cercle {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: var(--couleur, #2a6df4);
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.3s;
+}
+
+.cercle:hover {
+  transform: scale(1.12) rotate(8deg);
+}
+
+.cercle.actif {
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.25), 0 0 25px var(--couleur);
+}
+
+.membre h2 {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+}
+
+.membre p {
+  margin: 6px 0;
+  color: #b8c5e3;
+}
+
+.branche {
+  font-family: monospace;
+  color: var(--couleur) !important;
+  font-weight: bold;
+}
+
+.info {
+  display: none;
+}
+
+.membre.ouvert .info {
+  display: block;
+}
+
+.membre a {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: var(--couleur);
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.membre a:hover {
+  opacity: 0.85;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #7d8db0;
+  border-top: 1px solid #26324f;
+}
