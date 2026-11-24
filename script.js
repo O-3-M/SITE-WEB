@@ -8,7 +8,7 @@ membres.forEach(function (membre) {
 
   const cercle = membre.querySelector(".cercle");
 
-  // Clic sur le cercle : affiche / cache les infos
+
   cercle.addEventListener("click", function () {
     membre.classList.toggle("ouvert");
     cercle.classList.toggle("actif");
